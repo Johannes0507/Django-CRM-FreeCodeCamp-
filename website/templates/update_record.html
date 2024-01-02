@@ -1,0 +1,24 @@
+{% extends "basic.html" %}
+
+{% block title %}
+    更新紀錄
+{% endblock %}
+
+{% block content %}
+
+    <div class="col-md-6 offset-md-3">
+        <h1>更新紀錄</h1>
+        <br/>
+
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+            <br/>
+            <button type="submit" class="btn btn-secondary">更新紀錄</button>
+            <a class="btn btn-secondary" href="{% url 'home' %}">返回</a>
+        </form>
+
+    </div>
+
+{% endblock %}
