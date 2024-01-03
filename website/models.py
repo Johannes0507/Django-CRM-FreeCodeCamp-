@@ -24,6 +24,6 @@ class Record(models.Model):
             code = generate_record_code()
             self.id = f"{self.first_name}_{current_time.strftime('%Y%m%d')}{code}"
         super(Record, self).save(*args, **kwargs)
-
+    
 
 
